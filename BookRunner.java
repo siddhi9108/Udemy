@@ -1,13 +1,34 @@
-package com.siddhi.oops.level2;
+package com.siddhi.oops;
 
 public class BookRunner {
-
 	public static void main(String[] args) {
-		Book ob = new Book(123,"OOP with Java","Siddhi");
-		ob.addReview(new Review(10, "Great",5));
-		ob.addReview(new Review(9, "Average",5));
-		
-		System.out.println(ob);
-	}
+		Book artOfCompterProgramming = new Book(11);
+		Book effectiveJava = new Book(11);
+		Book cleanCode = new Book(11);
 
+		System.out.println(artOfCompterProgramming.getNoOfCopies());
+		System.out.println(effectiveJava.getNoOfCopies());
+		System.out.println(cleanCode.getNoOfCopies());
+
+		// artOfCompterProgramming.noOfCopies=12;
+		// effectiveJava.noOfCopies=11;
+		// cleanCode.noOfCopies=1;
+
+		artOfCompterProgramming.setNoOfCopies(100);
+		effectiveJava.setNoOfCopies(100);
+		cleanCode.setNoOfCopies(100);
+
+		// artOfCompterProgramming.increaseNoOfCopies(50);
+		// effectiveJava.increaseNoOfCopies(50);
+		// cleanCode.increaseNoOfCopies(50);
+
+		// artOfCompterProgramming.decreaseNoOfCopies(50);
+		// effectiveJava.decreaseNoOfCopies(50);
+		// cleanCode.decreaseNoOfCopies(50);
+
+		System.out.println(artOfCompterProgramming.getNoOfCopies());
+		System.out.println(effectiveJava.getNoOfCopies());
+		System.out.println(cleanCode.getNoOfCopies());
+
+	}
 }
