@@ -1,24 +1,26 @@
-package com.siddhi.oops.level2;
-
-import java.util.ArrayList;
+package com.siddhi.oops;
 
 public class Book {
-	private int id;
-	private String name;
-	private String author;
-	private ArrayList<Review> reviews = new ArrayList<>();
+	private int noOfCopies;
 
-	public Book(int id, String name, String author) {
-		this.id = id;
-		this.name = name;
-		this.author = author;
+	Book(int noOfCopies) {
+		this.noOfCopies = noOfCopies;
 	}
 
-	public void addReview(Review review) {
-		this.reviews.add(review);
+	public int getNoOfCopies() {
+		return noOfCopies;
 	}
 
-	public String toString() {
-		return String.format("id=%d, name=%s, Reviews=[%s]", id, name, author, reviews);
+	public void setNoOfCopies(int noOfCopies) {
+		if (this.noOfCopies > 0)
+			this.noOfCopies = noOfCopies;
+	}
+
+	public void increaseNoOfCopies(int howMuch) {
+		setNoOfCopies(this.noOfCopies + howMuch);
+	}
+
+	public void decreaseNoOfCopies(int howMuch) {
+		setNoOfCopies(this.noOfCopies - howMuch);
 	}
 }
